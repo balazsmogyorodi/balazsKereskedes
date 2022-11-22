@@ -1,8 +1,17 @@
-aside, header, nav,footer {
+ div.kosar  {
         border: 1px solid black;
           outline-style: solid;
-          background-color: wheat;
-        }
+          background-color: white;
+        }     
+         BODY, article, aside {
+    background-color: bisque;
+}
+
+
+footer, header, nav {
+    background-color: white;
+}
+
 
 main {
     display: grid;
@@ -15,54 +24,94 @@ main {
 }
 
 header {
-grid-area: h;
+    grid-area: h;
+    text-align: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -16px;
+    margin-top: -10px;
 }
 
 nav {
     grid-area: n;
-    
+ 
+   margin-left: -10px;
+   margin-right: -8px;
+   margin-bottom: -16px;
 }
 article {
     grid-area: a;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px;
+    margin-left: -7px;
+    margin-right: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     width: 100%;
     height: 100%;
- 
-
-
 }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: brown;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color:  bisque;
+  }
 
 div.termek {
     width: 90%;
     border: 1px solid black;
       outline-style: solid;
+      background-color: white;
+      margin-bottom: 50px;
+      margin-left: 5px;
+      margin-top: 10px;
+      
+      
     
 }
 div.rendeles {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 8px;
-
 }
 span {
 text-align: right;
-
-
+margin: 10px;
 }
 
 button {
     width: fit-content;
+    margin: 10px;
+    
   
 }
 p.leiras {
-    text-align: justify;
+    text-align: left;
     margin: 8px;
 }
 
 
 
 img {
+    border: 1px solid black;
+    outline-style: solid;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -76,10 +125,28 @@ h1.jatekNev {
 
 aside {
 grid-area: as;
+margin-right: -8px;
+margin-left: -8px;
+margin-top: 0px;
 }
 
+div.kosar{
+    margin-top: 10px;
+    height: 93%;
+    width: 95%;
+
+
+
+}
 footer {
     grid-area: f;
+    height:initial;
+    width:inherit;
+    text-align: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    margin-top: 10px;
 }
 
 h1.jatekNev {
@@ -88,3 +155,111 @@ text-align: center;
 
 
 
+@media screen and (max-width: 1200px) {
+
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "h  h "
+    "n  n "
+    "a  as"
+    "f  f ";
+}
+
+div.rendeles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+article {
+  grid-area: a;
+  display: grid;
+  margin-bottom: 50px;
+  margin-left: -7px;
+  margin-right: 5px;
+  grid-template-columns: 1fr 1fr; 
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+}
+@media screen and (max-width: 750px) {
+
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "h"
+    "n "
+    "a "
+    "as"
+    "f";
+}
+
+div.rendeles {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+article {
+  grid-area: a;
+  display: grid;
+  margin-bottom: 50px;
+  margin-left: -7px;
+  margin-right: 10px;
+  grid-template-columns: 1fr; 
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  width: fit-content;
+  margin-left: 10px;
+  
+
+}
+
+
+div.termek {
+  width: 90%;
+  border: 1px solid black;
+    outline-style: solid;
+    background-color: white;
+    margin-bottom: 80px;
+
+    margin-left: 30px;
+    margin-top: 10px;
+    
+}
+
+
+span {
+  text-align: right;
+  margin: 10px;
+  margin-top: -30px;
+
+  
+  }
+
+
+aside {
+margin-left: 20px;
+margin-top: 30px;
+
+}
+h2 {
+width: 80%;
+
+font-size: 14pt;
+margin-top: 0px;
+
+
+}
+
+}
